@@ -1,0 +1,33 @@
+Q.) If we assign you a task of optimising a rails 3 application that is performing poorly: A) What would be your course of action? and B) Why you would execute it in such a way?
+
+Ans.) I prefer to deploy the performance monitoring tool like Newrelic to locate the pain points. Once the pain points located by tool, I will take the below  action according to the nature of the issue.
+
+a.) Implement caching
+b.) Optimize database query
+c.) Indexing the field those are most frequently used for the search
+d.) Move the high volume operation into delayed job in case they don't require in real time
+e.) Implement the load balancer in case observing higher traffic
+
+
+Q.) If we assign you a task of optimising a rails 3 application that is performing poorly: A) What would be your course of action? and B) Why you would execute it in such a way?
+
+Please explain your opinion on automatic testing - how much test coverage should there be? What are indicators of a good test suite? In what cases is testing not required?
+
+Ans.) I always prefer to have test coverage for the code. Every application has some core feature and we must be having test coverage for these features in every aspect (functional, unit and integration), as failures of these features can not be acceptable.
+
+We should be minimize the I/O operation and use only whenever required as it impact the test execution time and we should define the scenario in the way that they can easily be understandable even a non-technical person.
+
+There is no meaning to test the ruby provided library as they are already properly tested and having sufficient test spec. Let's suppose a case where we are using ActiveRecord library so there is no need to have test case for the API provided by this package.
+
+Q.) If you had a chance to fly for free on an airplane that has software built with Ruby language. Would you take that chance? Please explain your answer.
+
+Ans.) Yes, I would take a chance but consider the below factor.
+
+1.) Verify if got a chance either software have test automation on the place..
+2.) How many times software used in the same operation
+3.) What is uptime
+4.) How much time to fix any production glitch
+
+Q.) Can you explain what is a composite key in relational databases? Provide some explanation/examples of where it can be used
+
+Ans.) Generally for each table we have the field which contains unique value and help to identify the each row but sometimes it's not possible to identity the row using a single attribute in a table. In such scenario, it's good to identify two or three field which combined value is unique and make them composite key. It can also be defined as primary key.
